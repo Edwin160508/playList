@@ -28,19 +28,9 @@ var executarMusica = function(musica){
     audio.src = `${musica.url}`;
     tituloMusica.html(musica.titulo);
     audio.play();
-    // var playPromise = document.querySelector('audio').play;
-    // if(playPromise != undefined){
-    //     playPromise.then(function(){
-    //         audio.addEventListener('loadeddata', function(){
-    //             playPromise = audio.play();
-    //         })
-    //         audio.load();
-    //     })
-    // }
-    
 }
+//verifica se a música a ser adicionada já existe no LocalStorage;
 var inserirMusicaNaPlaylist = function(valorPlaylistGeral){
-    //verifica se a música a ser adicionada já existe no LocalStorage;
     for(i=0; i<playListlocal.length;i++){
         if(playListlocal[i].id == valorPlaylistGeral.id){
             alert("Música já existe na playlist!");
